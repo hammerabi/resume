@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   entry: [
     "./src/index.jsx"
@@ -6,6 +8,14 @@ module.exports = {
     path: __dirname,
     publicPath: "/",
     filename: "bundle.js"
+  },
+  resolve: {
+    alias: {
+      styles: path.join(__dirname, "src/styles") 
+    }
+  },
+  resolveLoader: {
+    root: path.join(__dirname, "node_modules")
   },
   module: {
     loaders: [

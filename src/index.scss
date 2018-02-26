@@ -1,5 +1,9 @@
-@import "variables";
+@import "./styles/variables";
 
-body {
+body,
+html {
+  height: auto;
+  width: 100%;
   background-color: $neutral;
+  margin: 0;
 }
