@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import PageWrapper from "./components/PageWrapper";
+
+require("./index.scss");
 
 export default class App extends React.Component {
   constructor(props) {
@@ -10,12 +13,13 @@ export default class App extends React.Component {
   }
   render() {
     return (
-      <div>
-        
+      <div className="">
+
       </div>
     );
   }
 }
+
 
 
 ReactDOM.render(<App/>, document.getElementById("root"));

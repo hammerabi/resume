@@ -1,4 +1,3 @@
-# Change only after consulting #buk-developers
 # "rule": 1 -> warning
 # "rule": 2 -> error
 # check eslint docs for rule defaults and options

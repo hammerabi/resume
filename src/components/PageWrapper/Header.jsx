@@ -1,24 +1,19 @@
 import React from "react";
-import Header from "./Header";
+import ReactDOM from "react-dom";
 
 export default class PageWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      menuOpen: false,
     };
   };
 
   render() {
     return (
-      <div>
-        <Header />
-        <div>
-          {/*MainBody*/}
-        </div>
+      <div className="header-top-bar">
+        
       </div>
-
-
     );
   }
 }

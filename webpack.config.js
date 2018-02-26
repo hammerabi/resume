@@ -8,23 +8,40 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: "babel",
-      query: {
-        presets: ["react", "es2015", "stage-1"]
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        loader: "babel",
+        query: {
+          presets: [
+            require.resolve("babel-preset-es2015"),
+            require.resolve("babel-preset-react"),
+            require.resolve("babel-preset-stage-0")
+          ]
+        }
+      },
+      {
+        test: /\.json$/,
+        loader: "json-loader"
+      },
+      {
+        test: /.scss$/,
+        loader: "style-loader!css-loader!autoprefixer-loader!sass-loader"
+      },
+      {
+        test: /\.css$/,
+        loader: "style!css!"
+      },
+      {
+        test: /\.(jpg|png|svg|gif)$/,
+        loaders: ["file-loader?name=[path][name].[ext]"]
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2|svg\?)+/,
+        loader: "file-loader"
       }
-    }],
-    rules: [{
-      test: /\.scss$/,
-      use: [{
-        loader: "style-loader" // creates style nodes from JS strings
-      }, {
-        loader: "css-loader" // translates CSS into CommonJS
-      }, {
-        loader: "sass-loader" // compiles Sass to CSS
-      }]
-    }]
+    ]
   },
   resolve: {
     extensions: ["", ".js", ".jsx"]
