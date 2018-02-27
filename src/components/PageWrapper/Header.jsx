@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
 
 require("./index.scss");
 
-export default class PageWrapper extends React.Component {
+export default class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      activeTab: this.props.activeTab,
     };
   };
 
@@ -19,3 +19,7 @@ export default class PageWrapper extends React.Component {
     );
   }
 }
+
+Header.propTypes = {
+  activeTab: PropTypes.string,
+};

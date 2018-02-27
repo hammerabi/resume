@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Header from "./Header";
 
 require("./index.scss");
@@ -7,14 +8,14 @@ export default class PageWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: "home",
+      activeTab: this.props.activeTab,
     };
   };
 
   render() {
     return (
       <div>
-        <Header />
+        <Header activeTab={this.state.activeTab}/>
         <div>
           {/*MainBody*/}
         </div>
@@ -24,3 +25,7 @@ export default class PageWrapper extends React.Component {
     );
   }
 }
+
+PageWrapper.propTypes = {
+  activeTab: PropTypes.string,
+};
