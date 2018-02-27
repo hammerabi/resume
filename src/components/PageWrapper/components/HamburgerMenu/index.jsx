@@ -55,7 +55,13 @@ export default class HamburgerMenu extends React.Component {
           <div className="menu-wrapper__menu-list">
             <ul>
               <li>
-                1
+                Home
+              </li>
+              <li>
+                About
+              </li>
+              <li>
+                Qualifications
               </li>
             </ul>
           </div>
