@@ -10,12 +10,23 @@ export default class PageWrapper extends React.Component {
     this.state = {
       activeTab: this.props.activeTab,
     };
+
+    this.updateActiveTab = this.updateActiveTab.bind(this);
   };
+
+  updateActiveTab(newActiveTab) {
+    this.setState({
+      activeTab: newActiveTab
+    });
+  }
 
   render() {
     return (
       <div>
-        <Header activeTab={this.state.activeTab}/>
+        <Header
+          activeTab={this.state.activeTab}
+          updateHandler={this.updateActiveTab}
+        />
         <div>
           {/*MainBody*/}
         </div>
