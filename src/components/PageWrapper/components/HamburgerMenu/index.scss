@@ -3,8 +3,17 @@ $hamburger-layer-color: #FF3B3F;
 @import "src/styles/variables";
 
 .hamburger-menu-container {
+  z-index: 999;
   width: 70px;
   height: 100%;
   right: 0;
+  position: absolute;
+}
+
+.menu-wrapper__menu-list {
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: $neutral;
   position: absolute;
 }

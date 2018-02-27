@@ -11,10 +11,20 @@ export default class App extends React.Component {
     this.state = {
       activeTab: "home",
     };
+
+    this.updateActiveTab = this.updateActiveTab.bind(this);
+  }
+
+  updateActiveTab(newActiveTab) {
+    this.setState({
+      activeTab: newActiveTab
+    });
   }
   render() {
     return (
-      <PageWrapper />
+      <PageWrapper
+        activeTab={this.state.activeTab}
+      />
     );
   }
 }

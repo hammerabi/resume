@@ -45,7 +45,8 @@ export default class HamburgerMenu extends React.Component {
         <div className={className}
           onClick={(event) => {
             this.toggleMenuState();
-          }}>
+
+        }}>
           <span className="hamburger-box">
             <span className="hamburger-inner"/>
           </span>

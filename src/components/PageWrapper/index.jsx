@@ -15,23 +15,15 @@ export default class PageWrapper extends React.Component {
   };
 
   updateActiveTab(newActiveTab) {
-    this.setState({
-      activeTab: newActiveTab
-    });
+    this.props.updateHandler(newActiveTab);
   }
 
   render() {
     return (
-      <div>
-        <Header
-          activeTab={this.state.activeTab}
-          updateHandler={this.updateActiveTab}
-        />
-        <div>
-          {/* MainBody */}
-        </div>
-      </div>
-
+      <Header
+        activeTab={this.state.activeTab}
+        updateHandler={this.updateActiveTab}
+      />
 
     );
   }
@@ -39,4 +31,5 @@ export default class PageWrapper extends React.Component {
 
 PageWrapper.propTypes = {
   activeTab: PropTypes.string,
+  updateHandler: PropTypes.func,
 };
