@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PageWrapper from "./components/PageWrapper";
+import {Router, Route} from "react-router";
 
 require("./index.scss");
 

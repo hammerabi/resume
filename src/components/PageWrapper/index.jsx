@@ -28,7 +28,7 @@ export default class PageWrapper extends React.Component {
           updateHandler={this.updateActiveTab}
         />
         <div>
-          {/*MainBody*/}
+          {/* MainBody */}
         </div>
       </div>
 
