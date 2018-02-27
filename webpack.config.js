@@ -11,7 +11,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      styles: path.join(__dirname, "src/styles") 
+      styles: path.join(__dirname, "src/styles")
     }
   },
   resolveLoader: {
