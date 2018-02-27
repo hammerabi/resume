@@ -8,18 +8,27 @@ export default class HamburgerMenu extends React.Component {
     super(props);
     this.state = {
       activeMenuItem: this.props.activeTab,
-      menuOpen: false,
+      menuOpen: this.props.menuOpen,
     };
 
     this.onMenuItemClick = this.onMenuItemClick.bind(this);
   };
 
   onMenuItemClick(event) {
+    event.preventDefault();
+    this.setState({menuOpen: false}, () => {
+      this.props.updateHandler(this.state.activeMenuItem);
+    });
+  }
 
+  toggleMenuState() {
+    this.setState({menuOpen: !this.state.menuOpen});
   }
 
   onCloseButtonClicked(event) {
-
+    this.setState({
+      menuOpen: false,
+    });
   }
 
   render() {
@@ -32,15 +41,32 @@ export default class HamburgerMenu extends React.Component {
       className += " is-active";
     }
     return (
-      <div className={className}>
-        <span className="hamburger-box">
-          <span className="hamburger-inner"/>
-        </span>
+      <div className="menu-wrapper">
+        <div className={className}
+          onClick={(event) => {
+            this.toggleMenuState();
+          }}>
+          <span className="hamburger-box">
+            <span className="hamburger-inner"/>
+          </span>
+        </div>
+        {this.state.menuOpen &&
+          <div className="menu-wrapper__menu-list">
+            <ul>
+              <li>
+                1
+              </li>
+            </ul>
+          </div>
+        }
       </div>
+
     );
   }
 }
 
 HamburgerMenu.propTypes = {
   activeTab: PropTypes.string,
+  menuOpen: PropTypes.bool,
+  updateHandler: PropTypes.func,
 };

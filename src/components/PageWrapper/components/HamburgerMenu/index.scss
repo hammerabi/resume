@@ -1,7 +1,10 @@
+$hamburger-layer-color: #FF3B3F;
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import "src/styles/variables";
 
 .hamburger-menu-container {
   width: 70px;
   height: 100%;
-  
+  right: 0;
+  position: absolute;
 }
