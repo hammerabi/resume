@@ -6,4 +6,7 @@ install:
   - npm install
 
 deploy:
-  - npm run-script deploy
+  provider: s3
+  local-dir: public
+  on:
+    branch: master
