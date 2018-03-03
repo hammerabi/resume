@@ -3,7 +3,7 @@ node_js:
  - "6.11.2"
 
 install:
-  - npm install
+  - npm install && npm run-script build
 
 deploy:
   provider: s3
