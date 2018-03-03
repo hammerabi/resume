@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+webpack --progress --profile --colors --output-path ./public/
+
+cp index.html public
+cp 404.html public
+
+s3cmd sync ./public/ s3://joshbutcher.io/
