@@ -6,7 +6,7 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base ./ --hot --inline",
-    "build": "webpack --progress --profile --colors --output-path ./public/",
+    "build": "webpack --progress --profile --colors --output-path ./public/ && cp index.html public && cp 404.html public",
     "deploy": "./deploy"
   },
   "author": "",
