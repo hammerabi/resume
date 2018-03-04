@@ -63,6 +63,9 @@ export default class HamburgerMenu extends React.Component {
               <li>
                 Qualifications
               </li>
+              <li>
+                Github
+              </li>
             </ul>
           </div>
         }
