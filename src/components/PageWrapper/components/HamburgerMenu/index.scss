@@ -16,5 +16,12 @@ $hamburger-layer-color: #FF3B3F;
   height: 100%;
   background-color: $carbon;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0.98;
+  &__list {
+    list-style-type: none;
+
+  }
 }

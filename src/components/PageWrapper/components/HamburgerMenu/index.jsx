@@ -50,7 +50,7 @@ export default class HamburgerMenu extends React.Component {
         </div>
         {this.state.menuOpen &&
           <div className="menu-wrapper__menu">
-            <ul>
+            <ul className="menu-wrapper__menu__list">
               <li>
                 Home
               </li>
