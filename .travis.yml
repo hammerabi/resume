@@ -27,7 +27,7 @@ deploy:
     branch: master
 after_deploy:
 - aws configure set preview.cloudfront true
-- aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+- aws cloudfront create-invalidation --distribution-id EB1ZESPETMGXW --paths "/*"
 env:
   global:
     secure: ncB2OU48pW7q1ZUQlh9zWkSOBEm5kc+t1bnaBevrw82dgt2e3l1C0o2lnF1sLs+uM0AZHzqOnEyP5j1qFzopSJlBeH8Fht3Gial8zaKZDDoRE8tDrEZu0upvYNSPh0DmIECwf8jYCkyVgHyamMlXoh9nXzSwt9q0rxwAhZ4fa3EJoNkS7gxyjdSeudQ+ZayKnZxK1irc5UG9b9yzeSfrZRCmhgsPNVVHAi4BSdfmswUs99+seizbxBuGkGLJis9mxYY1ixghnRGBKcHrjtNNUUAYthY62bgOTdOF5eSy6LTIJ7H6oxN+2Hh6psSOfI9XUuBQvB7F8VJJZVMzdd9qBtV02GC9cc4WjTlE4L/sQ1Ev+km54lCqym468mn2FwtaKed7i2l3XB36scR85ghYrUeaTAb833cBSBxL5cQcMEheIngTl7IuiBWyi1UhOf5eZn9fM/DIfBbzNTqG7lAagshi5GZSmjBfw+MoW+9qZFRBqvOJxWIEEeAiaFoZol+yFsxUCNu0q/XgungJsBUrjmdfo/ShqkBxdkcBV51UD7gumLMyGBKtow++BFsz7tHgRqbQshbYzcSd6qkboSvqWPqIp6ubyZ7OFPbxjJrokVi+Jqr84vOV4yjNgNurnJDFE0bX/vCCRG5PuwT7fwWTl9gJ7EXfkYU2D0zNQiOBHA8=
