@@ -32,9 +32,6 @@ export default class HamburgerMenu extends React.Component {
   }
 
   render() {
-    // I hate that this method of class toggling is standard practice
-    // Verbose logic in the render method doesn't feel very React-y
-    // inb4 I replace everything with redux and ternarys
 
     let className = "hamburger-menu-container hamburger hamburger--elastic";
     if (this.state.menuOpen) {
@@ -52,7 +49,7 @@ export default class HamburgerMenu extends React.Component {
           </span>
         </div>
         {this.state.menuOpen &&
-          <div className="menu-wrapper__menu-list">
+          <div className="menu-wrapper__menu">
             <ul>
               <li>
                 Home
@@ -61,7 +58,7 @@ export default class HamburgerMenu extends React.Component {
                 About
               </li>
               <li>
-                Qualifications
+                Skills
               </li>
               <li>
                 Github
