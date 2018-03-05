@@ -8,7 +8,7 @@ cache:
 - pip
 install:
 - npm install && npm run-script build
-- pip install awscli
+- sudo pip install awscli
 deploy:
   provider: s3
   access_key_id:
