@@ -22,7 +22,7 @@ deploy:
   skip_cleanup: true
   region: us-east-1
   local_dir: public
-  cache_control: max-age=21600
+  cache_control: max-age=2160
   on:
     branch: master
 after_deploy:
