@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {browserHistory, Link} from "react-router";
 
 require("./index.scss");
 
@@ -14,11 +15,16 @@ export default class HamburgerMenu extends React.Component {
     this.onMenuItemClick = this.onMenuItemClick.bind(this);
   };
 
-  onMenuItemClick(event) {
-    event.preventDefault();
+  onMenuItemClick(item) {
+    // if (item === "home") {
+    //   browserHistory.push("/");
+    // } else {
+    //   browserHistory.push(item);
+    // }
     this.setState({menuOpen: false}, () => {
-      this.props.updateHandler(this.state.activeMenuItem);
+      this.props.updateHandler(item);
     });
+
   }
 
   toggleMenuState() {
@@ -51,14 +57,14 @@ export default class HamburgerMenu extends React.Component {
         {this.state.menuOpen &&
           <div className="menu-wrapper__menu">
             <ul className="menu-wrapper__menu__list">
-              <li>
-                Home
+              <li onClick={() => {this.onMenuItemClick("home");}}>
+                <Link to="/">Home</Link>
               </li>
-              <li>
-                About
+              <li onClick={() => {this.onMenuItemClick("about");}}>
+                <Link to="about">About</Link>
               </li>
-              <li>
-                Skills
+              <li onClick={() => {this.onMenuItemClick("skills");}}>
+                <Link to="skills">Skills</Link>
               </li>
               <li>
                 Github

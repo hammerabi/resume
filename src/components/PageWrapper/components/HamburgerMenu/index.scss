@@ -23,6 +23,14 @@ $hamburger-layer-color: #FF3B3F;
   &__list {
     list-style-type: none;
     > li {
+
+      > a {
+        color: #373a3c;
+        &:hover {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
       font-size: 30px;
       cursor: pointer;
       margin-bottom: 5px;

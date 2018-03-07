@@ -24,7 +24,6 @@ export default class PageWrapper extends React.Component {
         activeTab={this.state.activeTab}
         updateHandler={this.updateActiveTab}
       />
-
     );
   }
 }
