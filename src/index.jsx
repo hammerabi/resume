@@ -4,6 +4,7 @@ import PageWrapper from "./components/PageWrapper";
 import About from "./scenes/About";
 import Home from "./scenes/Home";
 import Skills from "./scenes/Skills";
+import FourOhFour from "./scenes/FourOhFour";
 import {Router, Route, browserHistory} from "react-router";
 
 require("./index.scss");
@@ -30,6 +31,9 @@ export default class App extends React.Component {
         <Route
           path="/skills"
           component={Skills}
+        />
+        <Route path="*"
+          component={FourOhFour}
         />
       </Router>
     );

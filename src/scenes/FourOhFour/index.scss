@@ -1,0 +1,10 @@
+@import "src/styles/variables";
+
+.fourohfour-container {
+  font-size: 80px;
+  color: $watermelon;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
