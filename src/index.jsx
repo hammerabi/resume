@@ -12,17 +12,10 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: "home",
+
     };
-
-    this.updateActiveTab = this.updateActiveTab.bind(this);
   }
 
-  updateActiveTab(newActiveTab) {
-    this.setState({
-      activeTab: newActiveTab
-    });
-  }
   render() {
     return (
       <Router history={browserHistory}>

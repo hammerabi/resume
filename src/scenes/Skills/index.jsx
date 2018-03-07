@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import PageWrapper from "../../components/PageWrapper";
 
 require("./index.scss");
@@ -15,12 +14,10 @@ export default class Skills extends React.Component {
   render() {
     return (
       <div>
-        <PageWrapper />
+        <PageWrapper
+          activeTab="skills"
+        />
       </div>
     );
   }
 }
-
-Skills.propTypes = {
-
-};
