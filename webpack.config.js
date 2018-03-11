@@ -10,11 +10,6 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js"
   },
-  resolve: {
-    alias: {
-      styles: path.join(__dirname, "src/styles")
-    }
-  },
   resolveLoader: {
     root: path.join(__dirname, "node_modules")
   },
@@ -62,7 +57,12 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ["", ".js", ".jsx"]
+    extensions: ["", ".js", ".jsx"],
+    alias: {
+      styles: path.join(__dirname, "src/styles"),
+      commonComponents: path.join(__dirname, "src/components"),
+      utils: path.join(__dirname, "src/utils"),
+    }
   },
   devServer: {
     historyApiFallback: true,

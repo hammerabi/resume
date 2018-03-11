@@ -10,19 +10,23 @@ export default class PageWrapper extends React.Component {
     this.state = {
       activeTab: this.props.activeTab,
     };
-
   };
 
   render() {
     return (
-      <Header
-        activeTab={this.state.activeTab}
-      />
+      <div>
+        <Header
+          activeTab={this.state.activeTab}
+        />
+        {this.props.children}
+      </div>
     );
   }
 }
 
 PageWrapper.propTypes = {
   activeTab: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]),
+  component: PropTypes.obj,
   updateHandler: PropTypes.func,
 };

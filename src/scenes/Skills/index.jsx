@@ -1,5 +1,6 @@
 import React from "react";
-import PageWrapper from "../../components/PageWrapper";
+import PageWrapper from "commonComponents/PageWrapper";
+import SkillsBlock from "./components/SkillsBlock";
 
 require("./index.scss");
 
@@ -16,7 +17,9 @@ export default class Skills extends React.Component {
       <div>
         <PageWrapper
           activeTab="skills"
-        />
+        >
+          <SkillsBlock/>
+        </PageWrapper>
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React from "react";
 import PageWrapper from "../../components/PageWrapper";
 
 require("./index.scss");
+const fourohfour = require("styles/icons/404.gif");
 
 export default class FourOhFour extends React.Component {
   constructor(props) {
@@ -16,7 +17,8 @@ export default class FourOhFour extends React.Component {
       <div>
         <PageWrapper/>
         <span className="fourohfour-container">
-          404, man.
+          404, man. <br/>
+          <img src={fourohfour} />
         </span>
       </div>
     );
