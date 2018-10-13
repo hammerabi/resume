@@ -1,7 +1,3 @@
-# "rule": 1 -> warning
-# "rule": 2 -> error
-# check eslint docs for rule defaults and options
-
 {
   "extends": [
     "react-app",
@@ -13,8 +9,6 @@
     "import"
   ],
   "rules": {
-    # General JS rules
-    # see https://github.com/airbnb/javascript
     "indent": ["warn", 2, {"SwitchCase": 1}],
     "prefer-const": 1,
     "no-const-assign": 1,
@@ -35,8 +29,6 @@
     "space-before-blocks": 1,
     "keyword-spacing": ["warn", {"before": true, "after": true}],
     "no-multi-spaces": 2,
-    # This rule is recommended to make git diffs a litte nicer, but I think its kind of gross - Geoff
-    # "comma-dangle": ["warn", "always"],
     "space-infix-ops": 1,
     "spaced-comment": 1,
     "object-curly-spacing": 1,
@@ -68,15 +60,11 @@
     "new-cap": 1,
     "no-debugger": 1,
 
-    # Module/Import-specific rules
-    # see https://github.com/airbnb/javascript#modules
     "import/no-mutable-exports": 1,
     "import/prefer-default-export": 1,
     "import/first": 1,
     "import/no-webpack-loader-syntax": 1,
 
-    # React-specific rules
-    # see https://github.com/airbnb/javascript/tree/master/react
     "react/jsx-closing-bracket-location": 1,
     "react/jsx-indent-props": ["warn", 2],
     "react/jsx-indent": ["warn", 2],
@@ -105,9 +93,6 @@
     "react/jsx-equals-spacing": 1,
     "react/jsx-no-comment-textnodes": 1,
     "react/jsx-no-undef": 2,
-    "react/jsx-max-props-per-line": 1,
-    # not defined for some reason. TODO: check react plugin versions
-    # "react/jsx-tag-spacing": 1,
-    # "react/void-dom-elements-no-children": 2,
+    "react/jsx-max-props-per-line": 1
   }
 }

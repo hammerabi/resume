@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "git@github.com:hammerabi/resume.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base ./ --hot --inline",
     "build": "webpack --progress --profile --colors --output-path ./public/ && cp index.html public && cp 404.html public",
@@ -27,8 +27,8 @@
     "eslint-config-react-app": "^0.6.2",
     "eslint-plugin-flowtype": "^2.46.1",
     "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.10.3",
     "file-loader": "^1.1.9",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
@@ -46,6 +46,7 @@
     "prop-types": "^15.6.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-modal": "^3.6.1",
     "react-redux": "4.3.0",
     "react-router": "^2.8.1",
     "redux": "^3.7.2"
