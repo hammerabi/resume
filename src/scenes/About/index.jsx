@@ -15,6 +15,7 @@ export default class About extends React.Component {
     return (
       <div>
         <PageWrapper
+          pageTitle="About"
           activeTab="about"
         />
       </div>

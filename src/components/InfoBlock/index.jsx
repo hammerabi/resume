@@ -8,6 +8,7 @@ export default class InfoBlock extends React.Component {
     super(props);
     this.state = {
       showDetails: false,
+      detailsText: "More Info"
     };
 
     this.onHover = this.onHover.bind(this);
@@ -34,8 +35,8 @@ export default class InfoBlock extends React.Component {
         onMouseLeave={() => {this.onLeave();}}
       >
         {this.state.showDetails &&
-          <div className="info-block-container__details">
-            {this.props.details}
+          <div className="info-block-container__more_info">
+            {this.state.detailsText}
           </div>
         }
       </div>

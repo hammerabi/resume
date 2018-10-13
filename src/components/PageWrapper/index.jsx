@@ -9,6 +9,7 @@ export default class PageWrapper extends React.Component {
     super(props);
     this.state = {
       activeTab: this.props.activeTab,
+      pageTitle: this.props.pageTitle
     };
   };
 
@@ -17,6 +18,7 @@ export default class PageWrapper extends React.Component {
       <div>
         <Header
           activeTab={this.state.activeTab}
+          pageTitle={this.state.pageTitle}
         />
         {this.props.children}
       </div>
@@ -28,5 +30,6 @@ PageWrapper.propTypes = {
   activeTab: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]),
   component: PropTypes.obj,
+  pageTitle: PropTypes.string,
   updateHandler: PropTypes.func,
 };

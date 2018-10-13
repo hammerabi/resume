@@ -15,9 +15,8 @@ export default class FourOhFour extends React.Component {
   render() {
     return (
       <div>
-        <PageWrapper/>
+        <PageWrapper pageTitle="Four Oh Four"/>
         <span className="fourohfour-container">
-          404, man. <br/>
           <img src={fourohfour} />
         </span>
       </div>
