@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import PageWrapper from "./components/PageWrapper";
 import About from "./scenes/About";
-import Home from "./scenes/Home";
 import Skills from "./scenes/Skills";
 import FourOhFour from "./scenes/FourOhFour";
 import {Router, Route, browserHistory} from "react-router";
@@ -22,10 +20,6 @@ export default class App extends React.Component {
       <Router history={browserHistory}>
         <Route
           path="/"
-          component={Home}
-        />
-        <Route
-          path="/about"
           component={About}
         />
         <Route

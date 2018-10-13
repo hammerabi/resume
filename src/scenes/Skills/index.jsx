@@ -16,6 +16,7 @@ export default class Skills extends React.Component {
     return (
       <div>
         <PageWrapper
+          pageTitle="Skills"
           activeTab="skills"
         >
           <SkillsBlock/>

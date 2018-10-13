@@ -15,6 +15,9 @@ export default class Header extends React.Component {
   render() {
     return (
       <div className="header-top-bar">
+        <div className="header-top-bar__page_title">
+          {this.props.pageTitle}
+        </div>
         <HamburgerMenu
           activeTab={this.props.activeTab}
           updateHandler={this.props.updateHandler}
@@ -26,5 +29,6 @@ export default class Header extends React.Component {
 
 Header.propTypes = {
   activeTab: PropTypes.string,
+  pageTitle: PropTypes.string,
   updateHandler: PropTypes.func,
 };

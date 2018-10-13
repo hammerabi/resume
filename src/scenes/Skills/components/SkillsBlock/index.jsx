@@ -26,11 +26,6 @@ export default class SkillsBlock extends React.Component {
           details="details"
         />
         <InfoBlock
-          imageUrl={icons.sass}
-          title="Sass"
-          details="details"
-        />
-        <InfoBlock
           imageUrl={icons.postgres}
           title="Postgres"
           details="details"
@@ -56,11 +51,6 @@ export default class SkillsBlock extends React.Component {
           details="details"
         />
         <InfoBlock
-          imageUrl={icons.nginx}
-          title="nginx"
-          details="details"
-        />
-        <InfoBlock
           imageUrl={icons.node}
           title="Node.js"
           details="details"
@@ -71,28 +61,8 @@ export default class SkillsBlock extends React.Component {
           details="details"
         />
         <InfoBlock
-          imageUrl={icons.webpack}
-          title="Webpack"
-          details="details"
-        />
-        <InfoBlock
-          imageUrl={icons.apache}
-          title="Apache"
-          details="details"
-        />
-        <InfoBlock
           imageUrl={icons.aws}
           title="Amazon Web Services"
-          details="details"
-        />
-        <InfoBlock
-          imageUrl={icons.html}
-          title="HTML5"
-          details="details"
-        />
-        <InfoBlock
-          imageUrl={icons.jquery}
-          title="jquery"
           details="details"
         />
       </div>

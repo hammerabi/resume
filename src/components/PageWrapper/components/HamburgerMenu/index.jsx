@@ -54,20 +54,8 @@ export default class HamburgerMenu extends React.Component {
                 }}
               >
                 <Link
-                  className={this.props.activeTab === "home" ? "active" : ""}
-                  to="/"
-                >
-                  Home
-                </Link>
-              </li>
-              <li
-                onClick={() => {
-                  this.onMenuItemClick();
-                }}
-              >
-                <Link
                   className={this.props.activeTab === "about" ? "active" : ""}
-                  to="about"
+                  to="/"
                 >
                   About
                 </Link>
@@ -84,8 +72,12 @@ export default class HamburgerMenu extends React.Component {
                   Skills
                 </Link>
               </li>
-              <li>
-                Github
+              <li
+                onClick={() => {
+                  this.onMenuItemClick();
+                }}
+              >
+                <Link className={this.props.activeTab === "github" ? "active" : ""} target="_blank" to="https://github.com/hammerabi">Github</Link>
               </li>
             </ul>
           </div>
