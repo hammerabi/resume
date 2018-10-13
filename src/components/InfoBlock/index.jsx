@@ -39,9 +39,11 @@ export default class InfoBlock extends React.Component {
       backgroundImage: `url(${this.props.imageUrl})`,
       backgroundSize: "100% 100%"
     };
-
     const content = (
-      <div>{this.props.details}</div>
+      <div>
+        <div className="content-title">{this.props.title}</div>
+        <div className="content-detail">{this.props.details}</div>
+      </div>
     );
 
     return (

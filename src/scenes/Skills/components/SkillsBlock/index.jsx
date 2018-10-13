@@ -1,6 +1,6 @@
 import React from "react";
 import InfoBlock from "commonComponents/InfoBlock";
-import {icons} from "utils/icons.js";
+import {skills} from "utils/skills.js";
 
 require("./index.scss");
 
@@ -16,54 +16,54 @@ export default class SkillsBlock extends React.Component {
     return (
       <div className="skills-block">
         <InfoBlock
-          imageUrl={icons.js}
-          title="Javascript"
-          details="details"
-        />
-        <InfoBlock
-          imageUrl={icons.python}
+          imageUrl={skills.python.icon}
           title="Python"
-          details="details"
+          details={skills.python.details}
         />
         <InfoBlock
-          imageUrl={icons.postgres}
-          title="Postgres"
-          details="details"
-        />
-        <InfoBlock
-          imageUrl={icons.react}
-          title="React"
-          details="details"
-        />
-        <InfoBlock
-          imageUrl={icons.mongo}
-          title="Mongo DB"
-          details="details"
-        />
-        <InfoBlock
-          imageUrl={icons.django}
+          imageUrl={skills.django.icon}
           title="Django"
-          details="details"
+          details={skills.django.details}
         />
         <InfoBlock
-          imageUrl={icons.docker}
-          title="Docker"
-          details="details"
+          imageUrl={skills.js.icon}
+          title="Javascript"
+          details={skills.js.details}
         />
         <InfoBlock
-          imageUrl={icons.node}
-          title="Node.js"
-          details="details"
+          imageUrl={skills.react.icon}
+          title="React"
+          details={skills.react.details}
         />
         <InfoBlock
-          imageUrl={icons.mysql}
+          imageUrl={skills.mysql.icon}
           title="MySQL"
-          details="details"
+          details={skills.mysql.details}
         />
         <InfoBlock
-          imageUrl={icons.aws}
+          imageUrl={skills.postgres.icon}
+          title="Postgres"
+          details={skills.postgres.details}
+        />
+        <InfoBlock
+          imageUrl={skills.mongo.icon}
+          title="Mongo DB"
+          details={skills.mongo.details}
+        />
+        <InfoBlock
+          imageUrl={skills.docker.icon}
+          title="Docker"
+          details={skills.docker.details}
+        />
+        <InfoBlock
+          imageUrl={skills.node.icon}
+          title="Node.js"
+          details={skills.node.details}
+        />
+        <InfoBlock
+          imageUrl={skills.aws.icon}
           title="Amazon Web Services"
-          details="details"
+          details={skills.aws.details}
         />
       </div>
     );
